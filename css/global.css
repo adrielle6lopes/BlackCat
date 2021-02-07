@@ -1,0 +1,216 @@
+/* CSS do template do site */
+
+
+/* CSS Reset */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 16px;
+}
+
+a {
+    color: steelblue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: orangered;
+    text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 1rem 0;
+}
+
+
+/* Fundo da pĆ�gina */
+
+body {
+    background-image: url('/img/fundo.jpg');
+    background-color: paleturquoise;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* Wrap */
+
+.wrap {
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+    position: relative;
+    background: rgba(255, 255, 255, .8);
+}
+
+
+/* CabeĆ§alho (header) */
+
+.header {
+    background: purple;
+    color: palevioletred;
+    text-align: center;
+    align-items: center;
+}
+
+.header img {
+    width: 100px;
+    height: 90px;
+    align-items: center;
+}
+
+
+/* Menu principal */
+
+.nav {
+    background: rgb(105, 72, 148);
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav a {
+    display: inline-block;
+    color: palevioletred;
+    padding: .8rem;
+}
+
+.nav a:hover,
+.active {
+    background: powderblue;
+    text-decoration: none;
+}
+
+.nav a:first-child {
+    margin-right: auto;
+}
+
+
+/* Menu responsivo */
+
+.nav {
+    position: relative;
+}
+
+#navLinks {
+    position: absolute;
+    background: #333;
+    top: 3.3rem;
+    width: 70%;
+    box-shadow: -5px 5px 5px rgb(190, 190, 190);
+    right: 0;
+    display: none;
+    z-index: 20;
+}
+
+#navLinks a {
+    display: block;
+}
+
+#navLinks hr {
+    border: 0;
+    margin: 0;
+    width: 100%;
+    border-top: 1px dotted #ddd;
+}
+
+
+/* Comportamento em resoluĆ§Ćµes maiores */
+
+@media (min-width: 640px) {
+    #btnMenu,
+    #navLinks hr {
+        display: none;
+    }
+    #navLinks {
+        position: inherit;
+        background: transparent;
+        top: 0;
+        width: auto;
+        box-shadow: none;
+        display: block;
+    }
+    #navLinks a {
+        display: inline-block;
+    }
+}
+
+
+/* Fundo dos modais */
+
+.modal {
+    background: rgba(0, 0, 0, .6);
+    position: absolute;
+    top: 3.3rem;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    display: none;
+}
+
+
+/* Footer */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(105, 72, 148);
+    color: palevioletred;
+}
+
+.footer a {
+    color: palevioletred;
+    display: inline-block;
+    padding: .5rem;
+}
+
+.footer a:hover {
+    background: powderblue;
+}
+
+.footer div {
+    text-align: center;
+}
+
+
+/* ConteĆŗdo central (main) */
+
+.main {
+    padding: 0 1.5rem;
+}
+
+
+/* classes de uso geral */
+
+.responsivo {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Sticky footer - Footer fixo embaixo */
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main {
+    flex-grow: 1;
+}
